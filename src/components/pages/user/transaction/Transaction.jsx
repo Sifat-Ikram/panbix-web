@@ -2,6 +2,10 @@ import { useForm } from "react-hook-form";
 
 const Transaction = () => {
   const { register, handleSubmit } = useForm();
+  const transactions = [
+    { date: "2024-10-01", description: "Payment to ABC Store", amount: 120.0 },
+    { date: "2024-09-28", description: "Refund from XYZ", amount: -45.0 },
+  ];
 
   const onSubmit = (data) => {
     console.log(data);
@@ -28,16 +32,22 @@ const Transaction = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="bg-gray-100">
-                    <td className="border px-4 py-2">2024-10-01</td>
-                    <td className="border px-4 py-2">Payment to ABC Store</td>
-                    <td className="border px-4 py-2">$120.00</td>
-                  </tr>
-                  <tr>
-                    <td className="border px-4 py-2">2024-09-28</td>
-                    <td className="border px-4 py-2">Refund from XYZ</td>
-                    <td className="border px-4 py-2">-$45.00</td>
-                  </tr>
+                  {transactions.map((transaction, index) => (
+                    <tr
+                      key={index}
+                      className={index % 2 != 0 ? "bg-gray-100" : ""}
+                    >
+                      <td className="border px-4 py-2">{transaction.date}</td>
+                      <td className="border px-4 py-2">
+                        {transaction.description}
+                      </td>
+                      <td className="border px-4 py-2">
+                        {transaction.amount < 0
+                          ? `-${Math.abs(transaction.amount).toFixed(2)} BDT`
+                          : `${transaction.amount.toFixed(2)} BDT`}
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -62,7 +72,10 @@ const Transaction = () => {
                 className="border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Amount"
               />
-              <button type="submit" className="py-2 px-5 rounded-md bg-[#0E9C7E] text-white font-bold text-base w-full">
+              <button
+                type="submit"
+                className="py-2 px-5 rounded-md bg-[#0E9C7E] text-white font-bold text-base w-full"
+              >
                 Add Transaction
               </button>
             </form>

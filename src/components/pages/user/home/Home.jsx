@@ -1,61 +1,98 @@
 import Banner from "./Banner";
 import { Link } from "react-router-dom";
-import task from "../../../../assets/images/dashboard/task.png";
-import deposit from "../../../../assets/images/dashboard/deposit.png";
-import withdraw from "../../../../assets/images/dashboard/withdraw.png";
-import packages from "../../../../assets/images/dashboard/package.png";
-import profile from "../../../../assets/images/dashboard/profile.png";
-import refer from "../../../../assets/images/dashboard/refer.png";
-import transaction from "../../../../assets/images/dashboard/transaction.png";
-import helpline from "../../../../assets/images/dashboard/helpline.png";
-import youtube from "../../../../assets/images/dashboard/youtube.png";
+import {
+  FaTasks,
+  FaPiggyBank,
+  FaBoxOpen,
+  FaUserAlt,
+  FaMoneyCheckAlt,
+  FaPhoneAlt,
+  FaYoutube,
+} from "react-icons/fa";
+import { GiCash } from "react-icons/gi";
+import { BsFillSendCheckFill } from "react-icons/bs";
 
 const Home = () => {
-  const cards = [
-    { img: task, title: "My Work", link: "/dashboard/user/task" },
-    { img: deposit, title: "Deposit", link: "/dashboard/user/deposit" },
-    { img: withdraw, title: "Withdraw", link: "/dashboard/user/withdraw" },
-    { img: packages, title: "Packages", link: "/dashboard/user/package" },
-    { img: profile, title: "Profile", link: "/dashboard/user/account" },
-    { img: refer, title: "Refer", link: "/dashboard/user/referral" },
-    { img: transaction, title: "Transaction", link: "/dashboard/user/transaction" },
-    { img: helpline, title: "Helpline", link: "/dashboard/user/helpline" },
-  ];
-
   return (
     <div className="flex flex-col bg-gray-100 min-h-screen mb-8">
       <div>
         <Banner />
       </div>
-      <div className="p-6 w-full">
-        <div className="bg-white border border-gray-200 rounded-lg shadow-md p-6">
+      <div className="lg:px-6 px-3 py-6 w-full">
+        <div className="bg-white border border-gray-200 rounded-lg shadow-md lg:px-6 px-3 py-6">
           <h2 className="text-2xl font-bold mb-4">All Services</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {cards.map((service, id) => (
-              <Link to={service.link} key={id} className="group">
-                <div className="flex items-center flex-col p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-lg transition cursor-pointer transform hover:-translate-y-1">
-                  <img
-                    src={service.img}
-                    alt={service.title}
-                    className="h-18 w-18 mb-3"
-                  />
-                  <h2 className="text-black font-medium text-center group-hover:text-[#0E9C7E]">
-                    {service.title}
-                  </h2>
-                </div>
-              </Link>
-            ))}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 lg:gap-6 mt-8">
+            <Link to="/dashboard/user/task">
+              <div className="flex items-center flex-col py-4 bg-gray-50 rounded-lg border shadow-md hover:shadow-lg transition cursor-pointer transform hover:-translate-y-1 group">
+                <FaTasks className="text-4xl mb-3 text-[#0E9C7E]" />
+                <h2 className="text-black font-medium text-center group-hover:text-[#0E9C7E]">
+                  My Work
+                </h2>
+              </div>
+            </Link>
+            <Link to="/dashboard/user/deposit">
+              <div className="flex items-center flex-col py-4 bg-gray-50 rounded-lg border shadow-md hover:shadow-lg transition cursor-pointer transform hover:-translate-y-1 group">
+                <FaPiggyBank className="text-4xl mb-3 text-[#0E9C7E]" />
+                <h2 className="text-black font-medium text-center group-hover:text-[#0E9C7E]">
+                  Deposit
+                </h2>
+              </div>
+            </Link>
+            <Link to="/dashboard/user/withdraw">
+              <div className="flex items-center flex-col py-4 bg-gray-50 rounded-lg border shadow-md hover:shadow-lg transition cursor-pointer transform hover:-translate-y-1 group">
+                <GiCash className="text-4xl mb-3 text-[#0E9C7E]" />
+                <h2 className="text-black font-medium text-center group-hover:text-[#0E9C7E]">
+                  Withdraw
+                </h2>
+              </div>
+            </Link>
+            <Link to="/dashboard/user/package">
+              <div className="flex items-center flex-col py-4 bg-gray-50 rounded-lg border shadow-md hover:shadow-lg transition cursor-pointer transform hover:-translate-y-1 group">
+                <FaBoxOpen className="text-4xl mb-3 text-[#0E9C7E]" />
+                <h2 className="text-black font-medium text-center group-hover:text-[#0E9C7E]">
+                  Packages
+                </h2>
+              </div>
+            </Link>
+            <Link to="/dashboard/user/account">
+              <div className="flex items-center flex-col py-4 bg-gray-50 rounded-lg border shadow-md hover:shadow-lg transition cursor-pointer transform hover:-translate-y-1 group">
+                <FaUserAlt className="text-4xl mb-3 text-[#0E9C7E]" />
+                <h2 className="text-black font-medium text-center group-hover:text-[#0E9C7E]">
+                  Profile
+                </h2>
+              </div>
+            </Link>
+            <Link to="/dashboard/user/referral">
+              <div className="flex items-center flex-col py-4 bg-gray-50 rounded-lg border shadow-md hover:shadow-lg transition cursor-pointer transform hover:-translate-y-1 group">
+                <BsFillSendCheckFill className="text-4xl mb-3 text-[#0E9C7E]" />
+                <h2 className="text-black font-medium text-center group-hover:text-[#0E9C7E]">
+                  Refer
+                </h2>
+              </div>
+            </Link>
+            <Link to="/dashboard/user/transaction">
+              <div className="flex items-center flex-col py-4 bg-gray-50 rounded-lg border shadow-md hover:shadow-lg transition cursor-pointer transform hover:-translate-y-1 group">
+                <FaMoneyCheckAlt className="text-4xl mb-3 text-[#0E9C7E]" />
+                <h2 className="text-black font-medium text-center group-hover:text-[#0E9C7E]">
+                  Transaction
+                </h2>
+              </div>
+            </Link>
+            <Link to="/dashboard/user/helpline">
+              <div className="flex items-center flex-col py-4 bg-gray-50 rounded-lg border shadow-md hover:shadow-lg transition cursor-pointer transform hover:-translate-y-1 group">
+                <FaPhoneAlt className="text-4xl mb-3 text-[#0E9C7E]" />
+                <h2 className="text-black font-medium text-center group-hover:text-[#0E9C7E]">
+                  Helpline
+                </h2>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
       <div className="p-6">
         <Link className="flex max-md:flex-col max-md:space-y-5 bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-transform overflow-hidden mt-6">
           <div className="w-full md:w-2/5 h-52">
-            <img
-              src={youtube}
-              alt="youtube tutorial"
-              className="h-full w-full object-cover"
-            />
+            <FaYoutube className="text-7xl text-red-600 h-full w-full object-cover flex justify-center items-center" />
           </div>
           <div className="relative flex-1 flex flex-col justify-center items-center text-center p-6">
             <h2 className="text-2xl font-bold mb-2">Watch Our Tutorial</h2>

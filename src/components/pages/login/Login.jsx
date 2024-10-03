@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import logo from "../../../assets/images/logoIcon/logo.png";
+import logo from "../../../assets/images/logoIcon/rilt-Limited.png";
 import { HiPhoneArrowDownLeft } from "react-icons/hi2";
 import { HiLockClosed } from "react-icons/hi2";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -60,7 +60,7 @@ const Login = () => {
           </div>
           <button
             type="submit"
-            className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 text-white shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none w-full hover:bg-[#0c0ce8] mt-6 border bg-[#0c0ce8] shadow-none flex gap-3 justify-center items-center rounded-lg"
+            className="py-2 px-5 rounded-md bg-[#0E9C7E] text-white font-bold text-base w-full"
           >
             Login
           </button>
@@ -68,7 +68,7 @@ const Login = () => {
             Not registered yet?
             <br />
             <a
-              className="text-[#0c0ce8] font-kanit font-light transition-colors hover:text-red-700 text-lg"
+              className="text-[#0E9C7E] font-kanit font-light transition-colors hover:text-red-700 text-lg"
               href="/register"
             >
               Create new account

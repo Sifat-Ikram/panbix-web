@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import logo from "../../../assets/images/logoIcon/logo.png";
+import logo from "../../../assets/images/logoIcon/rilt-Limited.png";
 import { IoPerson } from "react-icons/io5";
 import { HiPhoneArrowDownLeft } from "react-icons/hi2";
 import { HiLockClosed } from "react-icons/hi2";
@@ -21,7 +21,7 @@ const Register = () => {
 
   return (
     <div className="min-h-screen bg-[#ebebeb] pb-10">
-      <div className="flex justify-center min-h-screen items-center rounded-lg">
+      <div className="flex justify-center min-h-screen items-center rounded-lg pt-8">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="mt-8 mb-2 relative w-80 max-w-screen-lg sm:w-96 bg-white p-5 rounded-lg"
@@ -30,7 +30,7 @@ const Register = () => {
             <img
               alt="avatar"
               src={logo}
-              className="inline-block object-cover object-center !rounded-full absolute left-0 right-0 -top-[4rem] border h-24 mx-auto w-24 border-green-500 bg-white shadow-green-900/20 ring-4 ring-green-500/30"
+              className="inline-block object-cover object-center rounded-full absolute left-0 right-0 -top-[4rem] border h-24 mx-auto w-24 border-green-500 bg-white shadow-green-900/20 ring-4 ring-green-500/30"
             />
           </div>
           <div className="mb-4 flex flex-col gap-6">
@@ -107,7 +107,7 @@ const Register = () => {
           </div>
           <button
             type="submit"
-            className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 text-white shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none w-full hover:bg-[#0c0ce8] mt-6 border bg-[#0c0ce8] shadow-none flex gap-3 justify-center items-center rounded-lg"
+            className="py-2 px-5 rounded-md bg-[#0E9C7E] text-white font-bold text-base w-full"
           >
             Register
           </button>
@@ -115,8 +115,8 @@ const Register = () => {
             Have an account?
             <br />
             <a
-              className="text-[#0c0ce8] font-kanit font-light transition-colors hover:text-red-700 text-lg"
-              href="/register"
+              className="text-[#0E9C7E] font-kanit font-light transition-colors hover:text-red-700 text-lg"
+              href="/logIn"
             >
               Login now
             </a>

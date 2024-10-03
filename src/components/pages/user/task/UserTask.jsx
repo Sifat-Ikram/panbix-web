@@ -1,11 +1,17 @@
 const UserTask = () => {
-  const task = [];
+  const task = [
+    { _id: 1, name: "Fix homepage styling issues", action: "Completed" },
+    { _id: 2, name: "Add authentication to login page", action: "Completed" },
+    { _id: 3, name: "Optimize images for faster loading", action: "Pending" },
+  ];
 
   return (
     <div>
       <div className="flex flex-col justify-center items-start mt-20">
         <div className="bg-white shadow rounded-lg w-4/5 mx-auto p-8">
-          <h1 className="text-center text-5xl font-bold mb-10">Completed Tasks</h1>
+          <h1 className="text-center text-5xl font-bold mb-10">
+            Completed Tasks
+          </h1>
           <div className="overflow-x-auto mt-3">
             <table className="table">
               {/* head */}

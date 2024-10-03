@@ -6,7 +6,7 @@ import { GoCrossReference } from "react-icons/go";
 import { RiLogoutBoxFill, RiGift2Fill } from "react-icons/ri";
 import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import people from "../../../assets/icon/people.png";
+import { IoPerson } from "react-icons/io5";
 import tap from "../../../assets/icon/tap.jpg";
 import Navbar from "../../shared/Navbar";
 
@@ -27,13 +27,9 @@ const Dashboard = () => {
     <div>
       <Navbar />
       <div className="flex">
-        <div className="w-72 min-h-screen bg-[#0E9C7E] fixed max-md:hidden">
-          <div className="w-full flex items-center justify-center gap-5 px-3 py-6 border-b-[1px] border-solid border-white">
-            <img
-              src={people}
-              alt="person"
-              className="object-cover object-center w-12 h-12 rounded-full border-2 border-white shadow-md"
-            />
+        <div className="lg:w-72 min-h-screen bg-[#0E9C7E] fixed max-md:hidden">
+          <div className="w-full flex items-center justify-center gap-5 px-3 py-5 border-b-[1px] border-solid border-white">
+            <IoPerson className="text-6xl font-extrabold rounded-full text-[#0E9C7E] bg-white p-1" />
             <div className="flex justify-center items-center flex-col">
               <h2 className="text-white text-base font-semibold mb-1">
                 jhon100
@@ -55,14 +51,14 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-          <ul className="space-y-[5px] my-1 px-6">
+          <ul className="space-y-[5px] my-3 md:px-3 lg:px-6">
             <li>
               <NavLink
                 to={"/dashboard/user/home"}
                 style={({ isActive }) => ({
                   background: isActive ? "#1b7964" : "",
                 })}
-                className="flex items-center text-white gap-2 text-lg py-2 px-6 rounded-md hover:bg-[#1b7964]"
+                className="flex items-center text-white gap-2 text-lg py-2 md:px-3 lg:px-6 rounded-md hover:bg-[#1b7964]"
               >
                 <MdHome className="text-2xl" />
                 <h1 className="font-semibold">Home</h1>
@@ -74,7 +70,7 @@ const Dashboard = () => {
                 style={({ isActive }) => ({
                   background: isActive ? "#1b7964" : "",
                 })}
-                className="flex items-center text-white gap-2 text-lg py-2 px-6 rounded-md hover:bg-[#1b7964]"
+                className="flex items-center text-white gap-2 text-lg py-2 md:px-3 lg:px-6 rounded-md hover:bg-[#1b7964]"
               >
                 <FaBoxArchive />
                 <h1 className="font-semibold">Deposit</h1>
@@ -86,7 +82,7 @@ const Dashboard = () => {
                 style={({ isActive }) => ({
                   background: isActive ? "#1b7964" : "",
                 })}
-                className="flex items-center text-white gap-2 text-lg py-2 px-6 rounded-md hover:bg-[#1b7964]"
+                className="flex items-center text-white gap-2 text-lg py-2 md:px-3 lg:px-6 rounded-md hover:bg-[#1b7964]"
               >
                 <FaMoneyCheck />
                 <h1 className="font-semibold">Withdraw</h1>
@@ -98,7 +94,7 @@ const Dashboard = () => {
                 style={({ isActive }) => ({
                   background: isActive ? "#1b7964" : "",
                 })}
-                className="flex items-center text-white gap-2 text-lg py-2 px-6 rounded-md hover:bg-[#1b7964]"
+                className="flex items-center text-white gap-2 text-lg py-2 md:px-3 lg:px-6 rounded-md hover:bg-[#1b7964]"
               >
                 <MdOutlineWork />
                 <h1 className="font-semibold">Daily Work</h1>
@@ -110,7 +106,7 @@ const Dashboard = () => {
                 style={({ isActive }) => ({
                   background: isActive ? "#1b7964" : "",
                 })}
-                className="flex items-center text-white gap-2 text-lg py-2 px-6 rounded-md hover:bg-[#1b7964]"
+                className="flex items-center text-white gap-2 text-lg py-2 md:px-3 lg:px-6 rounded-md hover:bg-[#1b7964]"
               >
                 <RiGift2Fill />
                 <h1 className="font-semibold">Package</h1>
@@ -122,7 +118,7 @@ const Dashboard = () => {
                 style={({ isActive }) => ({
                   background: isActive ? "#1b7964" : "",
                 })}
-                className="flex items-center text-white gap-2 text-lg py-2 px-6 rounded-md hover:bg-[#1b7964]"
+                className="flex items-center text-white gap-2 text-lg py-2 md:px-3 lg:px-6 rounded-md hover:bg-[#1b7964]"
               >
                 <GrTransaction />
                 <h1 className="font-semibold">Transaction</h1>
@@ -134,7 +130,7 @@ const Dashboard = () => {
                 style={({ isActive }) => ({
                   background: isActive ? "#1b7964" : "",
                 })}
-                className="flex items-center text-white gap-2 text-lg py-2 px-6 rounded-md hover:bg-[#1b7964]"
+                className="flex items-center text-white gap-2 text-lg py-2 md:px-3 lg:px-6 rounded-md hover:bg-[#1b7964]"
               >
                 <GoCrossReference />
                 <h1 className="font-semibold">Referral</h1>
@@ -146,7 +142,7 @@ const Dashboard = () => {
                 style={({ isActive }) => ({
                   background: isActive ? "#1b7964" : "",
                 })}
-                className="flex items-center text-white gap-2 text-lg py-2 px-6 rounded-md hover:bg-[#1b7964]"
+                className="flex items-center text-white gap-2 text-lg py-2 md:px-3 lg:px-6 rounded-md hover:bg-[#1b7964]"
               >
                 <MdSwitchAccount />
                 <h1 className="font-semibold">Profile</h1>
@@ -158,7 +154,7 @@ const Dashboard = () => {
                 style={({ isActive }) => ({
                   background: isActive ? "#1b7964" : "",
                 })}
-                className="flex items-center text-white gap-2 text-lg py-2 px-6 rounded-md hover:bg-[#1b7964]"
+                className="flex items-center text-white gap-2 text-lg py-2 md:px-3 lg:px-6 rounded-md hover:bg-[#1b7964]"
               >
                 <FaHandsHelping />
                 <h1 className="font-semibold">Helpline</h1>
@@ -174,7 +170,7 @@ const Dashboard = () => {
             </li>
           </ul>
         </div>
-        <div className="flex-1 md:ml-72 w-11/12 mx-auto">
+        <div className="flex-1 md:ml-[248px] lg:ml-72 lg:w-11/12 mx-auto">
           <div>
             <Outlet />
           </div>

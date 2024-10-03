@@ -7,28 +7,13 @@ const Helpline = () => {
     console.log(data);
   };
 
-  const faqs = [
-    {
-      question: "How can I reset my password?",
-      answer:
-        "You can reset your password by clicking on the 'Forgot Password' link on the login page.",
-    },
-    {
-      question: "Where can I find my transaction history?",
-      answer:
-        "Your transaction history can be found in the 'My Account' section under 'Transactions'.",
-    },
-    {
-      question: "How do I contact customer support?",
-      answer:
-        "You can contact customer support through our live chat, email, or by calling the helpline number.",
-    },
-  ];
-
   return (
     <div className="p-10 min-h-screen">
       <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
-        Need Help? We are Here for You!
+        Need Help?
+      </h1>
+      <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
+        We are Here for You!
       </h1>
 
       <div className="bg-white p-8 rounded-lg shadow-lg mb-8">
@@ -42,26 +27,6 @@ const Helpline = () => {
           <strong>Email:</strong> support@yourwebsite.com
         </p>
       </div>
-      <div className="mb-8">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-6">
-          Frequently Asked Questions
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-            >
-              <h3 className="text-xl font-bold text-gray-700 mb-2">
-                {faq.question}
-              </h3>
-              <p className="text-gray-600">{faq.answer}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Support Form Section */}
       <div className="bg-white p-8 rounded-lg shadow-lg">
         <h2 className="text-2xl font-semibold text-gray-700 mb-6">
           Need Further Assistance? Contact Us

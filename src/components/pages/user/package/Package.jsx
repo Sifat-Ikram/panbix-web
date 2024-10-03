@@ -10,7 +10,7 @@ const Package = () => {
       {
         id: 1,
         name: "Basic",
-        price: "$19.99",
+        price: "19.99",
         features: [
           "Access to basic content",
           "Monthly updates",
@@ -20,7 +20,7 @@ const Package = () => {
       {
         id: 2,
         name: "Premium",
-        price: "$49.99",
+        price: "49.99",
         features: [
           "All Basic features",
           "Exclusive content",
@@ -31,7 +31,7 @@ const Package = () => {
       {
         id: 3,
         name: "VIP",
-        price: "$99.99",
+        price: "99.99",
         features: [
           "All Premium features",
           "One-on-one mentorship",
@@ -56,7 +56,7 @@ const Package = () => {
             className="bg-white p-6 shadow-lg rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
           >
             <h2 className="text-2xl font-semibold text-gray-800">{pkg.name}</h2>
-            <p className="text-xl text-gray-500 mb-4">{pkg.price}</p>
+            <p className="text-xl text-gray-500 mb-4">{pkg.price} BDT</p>
             <ul className="mb-6">
               {pkg.features.map((feature, index) => (
                 <li key={index} className="text-gray-600 mb-2">
